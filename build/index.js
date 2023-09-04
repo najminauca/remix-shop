@@ -24,9 +24,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 )), __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: !0 }), mod);
 
-// css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/abrio-products/node_modules/@remix-run/css-bundle/dist/index.js
+// css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/remix-shop/node_modules/@remix-run/css-bundle/dist/index.js
 var require_dist = __commonJS({
-  "css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/abrio-products/node_modules/@remix-run/css-bundle/dist/index.js"(exports) {
+  "css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/remix-shop/node_modules/@remix-run/css-bundle/dist/index.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: !0 });
     var cssBundleHref2 = "/build/css-bundle-MWTNYT7P.css";
@@ -773,7 +773,7 @@ async function action({ request }) {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-DM2EDGQ2.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-NJHFEDI5.js", "/build/_shared/chunk-XFNEQAGU.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-C6J2X6TU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-DSAAYAHK.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "18d3dc12", hmr: { runtime: "/build/_shared/chunk-XFNEQAGU.js", timestamp: 1693849460919 }, url: "/build/manifest-18D3DC12.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-QPAJBDOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-WAE5NWO2.js", "/build/_shared/chunk-KB4F7KC2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OKNMIMWQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-KSJVZDL6.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "7877b1b5", hmr: { runtime: "/build/_shared/chunk-KB4F7KC2.js", timestamp: 1693849817730 }, url: "/build/manifest-7877B1B5.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !0, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

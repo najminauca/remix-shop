@@ -8,17 +8,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from "/build/_shared/chunk-NJHFEDI5.js";
+} from "/build/_shared/chunk-WAE5NWO2.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-XFNEQAGU.js";
+} from "/build/_shared/chunk-KB4F7KC2.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import "/build/_shared/chunk-BOXFZXVX.js";
 import {
   __toESM
 } from "/build/_shared/chunk-PNG5AS42.js";
 
-// css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/abrio-products/node_modules/@remix-run/css-bundle/dist/esm/index.js
+// css-bundle-update-plugin-ns:/Users/tokimpoi/Workspace/remix-shop/node_modules/@remix-run/css-bundle/dist/esm/index.js
 var cssBundleHref = true ? "/build/css-bundle-MWTNYT7P.css" : void 0;
 
 // app/root.tsx
@@ -130,4 +130,4 @@ export {
    * @license MIT
    *)
 */
-//# sourceMappingURL=/build/root-C6J2X6TU.js.map
+//# sourceMappingURL=/build/root-OKNMIMWQ.js.map

@@ -7,10 +7,10 @@ import {
 } from "/build/_shared/chunk-XU7DNSPJ.js";
 import {
   RemixBrowser
-} from "/build/_shared/chunk-NJHFEDI5.js";
+} from "/build/_shared/chunk-WAE5NWO2.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-XFNEQAGU.js";
+} from "/build/_shared/chunk-KB4F7KC2.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_react
@@ -44,4 +44,4 @@ if (import.meta) {
     }, this)
   );
 });
-//# sourceMappingURL=/build/entry.client-DM2EDGQ2.js.map
+//# sourceMappingURL=/build/entry.client-QPAJBDOM.js.map

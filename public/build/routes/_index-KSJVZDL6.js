@@ -6,10 +6,10 @@ import {
 } from "/build/_shared/chunk-XU7DNSPJ.js";
 import {
   useLoaderData
-} from "/build/_shared/chunk-NJHFEDI5.js";
+} from "/build/_shared/chunk-WAE5NWO2.js";
 import {
   createHotContext
-} from "/build/_shared/chunk-XFNEQAGU.js";
+} from "/build/_shared/chunk-KB4F7KC2.js";
 import "/build/_shared/chunk-UWV35TSL.js";
 import {
   require_react
@@ -4982,7 +4982,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/components/color.filter.tsx"
   );
-  import.meta.hot.lastModified = "1693763088143.678";
+  import.meta.hot.lastModified = "1693763088143.6777";
 }
 function ColorFilterComponent({
   colorR,
@@ -5504,4 +5504,4 @@ object-assign/index.js:
   @license MIT
   *)
 */
-//# sourceMappingURL=/build/routes/_index-DSAAYAHK.js.map
+//# sourceMappingURL=/build/routes/_index-KSJVZDL6.js.map

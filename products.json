@@ -1,1 +1,85 @@
-{"products":[{"id":"1","title":"Product1","color":"R","categories":["A"],"stock":0,"price":10,"img":""},{"id":"2","title":"Xbox Wireless Controller","color":"G","categories":["A"],"stock":3,"price":47.99,"img":"https://news.xbox.com/de-de/wp-content/uploads/sites/3/37b6a7ea-9bdf-427b-bad2-40455f102308-a759f45e682eda1ad4c5.jpg"},{"id":"3","title":"Nintendo Joy-Con (L/R) - Blue","color":"B","categories":["A"],"stock":0,"price":36.99,"img":"https://m.media-amazon.com/images/I/61JsNMaa-UL.jpg"},{"id":"4","title":"Nintendo Switch OLED","color":"R","categories":["A"],"stock":10,"price":349.99,"img":"https://m.media-amazon.com/images/I/71ZvqI8yj1L._SL1500_.jpg"},{"id":"5","title":"Chia Pet","color":"G","categories":["B","C"],"stock":5,"price":22.99,"img":"https://m.media-amazon.com/images/I/91+tGn3gINL._AC_SX679_.jpg"},{"id":"6","title":"Gaming Table Decorative","color":"R","categories":["A","B","C"],"stock":5,"price":249.99,"img":"https://m.media-amazon.com/images/I/71L-wi5j5oL._AC_SL1500_.jpg"},{"id":"7","title":"Gaming Rocker Chair","color":"B","categories":["A","C"],"stock":6,"price":99.99,"img":"https://m.media-amazon.com/images/I/61Smu6TLf3S._SL1500_.jpg"},{"id":"8","title":"Green Backpack","color":"G","categories":["B"],"stock":2,"price":15.49,"img":""},{"id":"9","title":"Round Side Table","color":"B","categories":["C"],"stock":1,"price":33.99,"img":"https://m.media-amazon.com/images/I/51r7w8bowML._AC_UF1000,1000_QL80_.jpg"}]}
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product1",
+      "color": "R",
+      "categories": ["A"],
+      "stock": 0,
+      "price": 10.0,
+      "img": ""
+    },
+    {
+      "id": "2",
+      "title": "Xbox Wireless Controller",
+      "color": "G",
+      "categories": ["A"],
+      "stock": 3,
+      "price": 47.99,
+      "img": "https://news.xbox.com/de-de/wp-content/uploads/sites/3/37b6a7ea-9bdf-427b-bad2-40455f102308-a759f45e682eda1ad4c5.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Nintendo Joy-Con (L/R) - Blue",
+      "color": "B",
+      "categories": ["A"],
+      "stock": 5,
+      "price": 36.99,
+      "img": "https://m.media-amazon.com/images/I/61JsNMaa-UL.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Nintendo Switch OLED",
+      "color": "R",
+      "categories": ["A"],
+      "stock": 10,
+      "price": 349.99,
+      "img": "https://m.media-amazon.com/images/I/71ZvqI8yj1L._SL1500_.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Chia Pet",
+      "color": "G",
+      "categories": ["B", "C"],
+      "stock": 5,
+      "price": 22.99,
+      "img": "https://m.media-amazon.com/images/I/91+tGn3gINL._AC_SX679_.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Gaming Table Decorative",
+      "color": "R",
+      "categories": ["A", "B", "C"],
+      "stock": 5,
+      "price": 249.99,
+      "img": "https://m.media-amazon.com/images/I/71L-wi5j5oL._AC_SL1500_.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Gaming Rocker Chair",
+      "color": "B",
+      "categories": ["A", "C"],
+      "stock": 6,
+      "price": 99.99,
+      "img": "https://m.media-amazon.com/images/I/61Smu6TLf3S._SL1500_.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Green Backpack",
+      "color": "G",
+      "categories": ["B"],
+      "stock": 2,
+      "price": 15.49,
+      "img": ""
+    },
+    {
+      "id": "9",
+      "title": "Round Side Table",
+      "color": "B",
+      "categories": ["C"],
+      "stock": 1,
+      "price": 33.99,
+      "img": "https://m.media-amazon.com/images/I/51r7w8bowML._AC_UF1000,1000_QL80_.jpg"
+    }
+  ]
+}
