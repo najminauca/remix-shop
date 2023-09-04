@@ -5160,7 +5160,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/components/cart.entry.tsx"
   );
-  import.meta.hot.lastModified = "1693759406553.9795";
+  import.meta.hot.lastModified = "1693814117222.5925";
 }
 function CartEntryComponent({
   entry
@@ -5198,22 +5198,27 @@ function CartEntryComponent({
         lineNumber: 36,
         columnNumber: 21
       }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("input", { type: "hidden", value: 1, name: "count" }, void 0, false, {
+        fileName: "app/components/cart.entry.tsx",
+        lineNumber: 37,
+        columnNumber: 21
+      }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(ButtonGroup_default, { className: "me-2 cart-button-group", "aria-label": "First group", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Button_default2, { className: "cart-button", variant: "secondary", type: "submit", name: "intent", value: entry.count > 1 ? "minus" : "remove", children: "-" }, void 0, false, {
           fileName: "app/components/cart.entry.tsx",
-          lineNumber: 38,
+          lineNumber: 39,
           columnNumber: 25
         }, this),
         " ",
         /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(Button_default2, { className: "cart-button", variant: "secondary", type: "submit", name: "intent", value: "plus", children: "+" }, void 0, false, {
           fileName: "app/components/cart.entry.tsx",
-          lineNumber: 39,
+          lineNumber: 40,
           columnNumber: 25
         }, this),
         " "
       ] }, void 0, true, {
         fileName: "app/components/cart.entry.tsx",
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 21
       }, this)
     ] }, void 0, true, {
@@ -5257,7 +5262,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.tsx"
   );
-  import.meta.hot.lastModified = "1693762747721.1968";
+  import.meta.hot.lastModified = "1693812854066.01";
 }
 var meta = () => {
   return [{
@@ -5499,4 +5504,4 @@ object-assign/index.js:
   @license MIT
   *)
 */
-//# sourceMappingURL=/build/routes/_index-35JGUT6H.js.map
+//# sourceMappingURL=/build/routes/_index-DSAAYAHK.js.map

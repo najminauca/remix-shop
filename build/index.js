@@ -418,10 +418,10 @@ async function getAllEntries() {
   return JSON.parse(rawFileContent).entries ?? [];
 }
 async function addToCart(addToCart2) {
-  let entries = await getAllEntries(), productStock = (await getAllProducts()).filter((product) => product.id == addToCart2.id).stock, updatedCart = [];
+  let entries = await getAllEntries(), product = (await getAllProducts()).find((product2) => product2.id === addToCart2.id), updatedCart = [];
   return entries.filter((entry2) => entry2.id === addToCart2.id).length != 0 ? (entries.forEach((entry2) => {
-    entry2.id === addToCart2.id && parseInt(productStock) >= parseInt(addToCart2.count) && (entry2.count = parseInt(entry2.count) + parseInt(addToCart2.count));
-  }), updatedCart = entries) : updatedCart = entries.concat(addToCart2), import_promises2.default.writeFile("cart.json", JSON.stringify({ entries: updatedCart || [] }));
+    entry2.id === addToCart2.id && parseInt(product.stock) >= parseInt(addToCart2.count) && (entry2.count = parseInt(entry2.count) + parseInt(addToCart2.count));
+  }), updatedCart = entries) : parseInt(product.stock) >= parseInt(addToCart2.count) && (updatedCart = entries.concat(addToCart2)), import_promises2.default.writeFile("cart.json", JSON.stringify({ entries: updatedCart || [] }));
 }
 async function decreaseAmount(deleteEntry) {
   let entries = await getAllEntries(), updatedCart = [];
@@ -552,22 +552,27 @@ function CartEntryComponent({ entry: entry2 }) {
         lineNumber: 14,
         columnNumber: 21
       }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("input", { type: "hidden", value: 1, name: "count" }, void 0, !1, {
+        fileName: "app/components/cart.entry.tsx",
+        lineNumber: 15,
+        columnNumber: 21
+      }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react_bootstrap4.ButtonGroup, { className: "me-2 cart-button-group", "aria-label": "First group", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react_bootstrap4.Button, { className: "cart-button", variant: "secondary", type: "submit", name: "intent", value: entry2.count > 1 ? "minus" : "remove", children: "-" }, void 0, !1, {
           fileName: "app/components/cart.entry.tsx",
-          lineNumber: 16,
+          lineNumber: 17,
           columnNumber: 25
         }, this),
         " ",
         /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)(import_react_bootstrap4.Button, { className: "cart-button", variant: "secondary", type: "submit", name: "intent", value: "plus", children: "+" }, void 0, !1, {
           fileName: "app/components/cart.entry.tsx",
-          lineNumber: 17,
+          lineNumber: 18,
           columnNumber: 25
         }, this),
         " "
       ] }, void 0, !0, {
         fileName: "app/components/cart.entry.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 21
       }, this)
     ] }, void 0, !0, {
@@ -768,7 +773,7 @@ async function action({ request }) {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-DM2EDGQ2.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-NJHFEDI5.js", "/build/_shared/chunk-XFNEQAGU.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-C6J2X6TU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-35JGUT6H.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "d7253002", hmr: { runtime: "/build/_shared/chunk-XFNEQAGU.js", timestamp: 1693763299338 }, url: "/build/manifest-D7253002.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-DM2EDGQ2.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-NJHFEDI5.js", "/build/_shared/chunk-XFNEQAGU.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-C6J2X6TU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-DSAAYAHK.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "18d3dc12", hmr: { runtime: "/build/_shared/chunk-XFNEQAGU.js", timestamp: 1693849460919 }, url: "/build/manifest-18D3DC12.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !0, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

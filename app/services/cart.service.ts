@@ -10,18 +10,20 @@ export async function getAllEntries() {
 export async function addToCart(addToCart) {
     const entries = await getAllEntries();
     const products = await getAllProducts();
-    const productStock = products.filter(product => product.id == addToCart.id).stock
+    const product = products.find(product => product.id === addToCart.id)
     let updatedCart = [];
 
     if(entries.filter(entry => entry.id === addToCart.id).length != 0) {
         entries.forEach(entry => {
-            if(entry.id === addToCart.id && parseInt(productStock) >= parseInt(addToCart.count)) {
+            if(entry.id === addToCart.id && parseInt(product.stock) >= parseInt(addToCart.count)) {
                 entry.count = parseInt(entry.count) + parseInt(addToCart.count);
             }
         })
         updatedCart = entries;
     } else {
-        updatedCart = entries.concat(addToCart);
+        if(parseInt(product.stock) >= parseInt(addToCart.count)) {
+            updatedCart = entries.concat(addToCart);
+        }
     }
     return fs.writeFile('cart.json', JSON.stringify({entries: updatedCart || []}));
 }

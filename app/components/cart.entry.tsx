@@ -1,4 +1,4 @@
-import {Button, ButtonGroup, Card, Container} from "react-bootstrap";
+import {Button, ButtonGroup, Card} from "react-bootstrap";
 
 export default function CartEntryComponent({entry}) {
     return (
@@ -12,6 +12,7 @@ export default function CartEntryComponent({entry}) {
                     <input type="hidden" value={entry.id} name="id" />
                     <input type="hidden" value={entry.title} name="title" />
                     <input type="hidden" value={entry.price} name="price" />
+                    <input type="hidden" value={1} name="count" />
                     <ButtonGroup className="me-2 cart-button-group" aria-label="First group">
                         <Button className="cart-button" variant="secondary" type="submit" name="intent" value={entry.count > 1 ? "minus" : "remove"}>-</Button>{' '}
                         <Button className="cart-button" variant="secondary" type="submit" name="intent" value="plus">+</Button>{' '}
