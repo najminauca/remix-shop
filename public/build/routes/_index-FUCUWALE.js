@@ -5262,7 +5262,7 @@ if (import.meta) {
     //@ts-expect-error
     "app/routes/_index.tsx"
   );
-  import.meta.hot.lastModified = "1693812854066.01";
+  import.meta.hot.lastModified = "1693902743210.7964";
 }
 var meta = () => {
   return [{
@@ -5310,6 +5310,10 @@ function Index() {
     setColorB(!colorB);
   };
   const [sortType, setSortType] = (0, import_react42.useState)("");
+  const setSortTypeHandler = (e) => {
+    localStorage.setItem("sortType", JSON.stringify(e.target.value));
+    setSortType(e.target.value);
+  };
   (0, import_react42.useEffect)(() => {
     setIsVisible(JSON.parse(localStorage.getItem("isVisible")) || false);
     setCategoryA(JSON.parse(localStorage.getItem("categoryA")) || false);
@@ -5318,7 +5322,7 @@ function Index() {
     setColorR(JSON.parse(localStorage.getItem("colorR")) || false);
     setColorG(JSON.parse(localStorage.getItem("colorG")) || false);
     setColorB(JSON.parse(localStorage.getItem("colorB")) || false);
-    setSortType(JSON.parse(localStorage.getItem("sortType")) || false);
+    setSortType(JSON.parse(localStorage.getItem("sortType")) || "");
   }, []);
   (0, import_react42.useEffect)(function mount() {
     let lastScrollY = window.scrollY;
@@ -5337,54 +5341,54 @@ function Index() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Container_default, { className: "navbar fixed-top", fluid: true, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("img", { className: "navbar-icon", src: require_shop_logo() }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 109,
+        lineNumber: 113,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h4", { children: "Shop Demo" }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 110,
+        lineNumber: 114,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 108,
+      lineNumber: 112,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Container_default, { className: isVisible ? "filter-grid fixed-top" : "filter-grid fixed-top filter--hidden", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(CategoryFilterComponent, { categoryA, categoryB, categoryC, aCategoryHandler, bCategoryHandler, cCategoryHandler }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 114,
+        lineNumber: 118,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ColorFilterComponent, { colorR, colorG, colorB, rColorHandler, gColorHandler, bColorHandler }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 116,
+        lineNumber: 120,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Form_default.Select, { className: "sort-select filter-container filter-button", value: sortType, onChange: (e) => setSortType(e.target.value), children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Form_default.Select, { className: "sort-select filter-container filter-button", value: sortType, onChange: setSortTypeHandler, children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("option", { children: "None" }, void 0, false, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 119,
+          lineNumber: 123,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("option", { value: "ascending", children: "Low to High" }, void 0, false, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 120,
+          lineNumber: 124,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("option", { value: "descending", children: "High to Low" }, void 0, false, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 121,
+          lineNumber: 125,
           columnNumber: 11
         }, this)
       ] }, void 0, true, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 118,
+        lineNumber: 122,
         columnNumber: 9
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 113,
+      lineNumber: 117,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Row_default, { className: "product-grid", children: products.filter((product) => {
@@ -5410,22 +5414,22 @@ function Index() {
         return a.price < b.price ? 1 : -1;
     }).map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(ProductComponent, { product }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 138,
+      lineNumber: 142,
       columnNumber: 25
     }, this)) }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 125,
+      lineNumber: 129,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Row_default, { className: cart.length != 0 ? "cart-grid fixed-right" : "cart-grid--hidden fixed-right", children: /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Container_default, { className: "cart-content", children: cart.length != 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h4", { children: "Cart" }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 144,
+        lineNumber: 148,
         columnNumber: 13
       }, this),
       cart.map((entry) => /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(CartEntryComponent, { entry }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 145,
+        lineNumber: 149,
         columnNumber: 32
       }, this)),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("h4", { className: "mb-2 text-muted", children: [
@@ -5435,34 +5439,34 @@ function Index() {
         }, 0).toFixed(2).replace(".", ",")
       ] }, void 0, true, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 146,
+        lineNumber: 150,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(Button_default2, { className: "pay-button", variant: "success", children: "Pay Now" }, void 0, false, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 152,
+        lineNumber: 156,
         columnNumber: 13
       }, this)
     ] }, void 0, true, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 143,
+      lineNumber: 147,
       columnNumber: 31
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)(import_jsx_dev_runtime5.Fragment, {}, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 153,
+      lineNumber: 157,
       columnNumber: 17
     }, this) }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 142,
+      lineNumber: 146,
       columnNumber: 9
     }, this) }, void 0, false, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 141,
+      lineNumber: 145,
       columnNumber: 7
     }, this)
   ] }, void 0, true, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 107,
+    lineNumber: 111,
     columnNumber: 10
   }, this);
 }
@@ -5504,4 +5508,4 @@ object-assign/index.js:
   @license MIT
   *)
 */
-//# sourceMappingURL=/build/routes/_index-KSJVZDL6.js.map
+//# sourceMappingURL=/build/routes/_index-FUCUWALE.js.map

@@ -60,6 +60,10 @@ export default function Index() {
   };
 
   const [sortType, setSortType] = useState("");
+  const setSortTypeHandler = e => {
+    localStorage.setItem('sortType', JSON.stringify(e.target.value));
+    setSortType(e.target.value);
+  };
 
   //Hydrating states
   useEffect(() => {
@@ -70,8 +74,8 @@ export default function Index() {
     setColorR(JSON.parse(localStorage.getItem('colorR')) || false);
     setColorG(JSON.parse(localStorage.getItem('colorG')) || false);
     setColorB(JSON.parse(localStorage.getItem('colorB')) || false);
-    setSortType(JSON.parse(localStorage.getItem('sortType')) || false);
-  }, [])
+    setSortType(JSON.parse(localStorage.getItem('sortType')) || "");
+  }, []);
 
   useEffect(function mount() {
     let lastScrollY = window.scrollY;
@@ -114,7 +118,7 @@ export default function Index() {
             bColorHandler={bColorHandler}
         />
 
-        <Form.Select className={"sort-select filter-container filter-button"} value={sortType} onChange={e => setSortType(e.target.value)}>
+        <Form.Select className={"sort-select filter-container filter-button"} value={sortType} onChange={setSortTypeHandler}>
           <option>None</option>
           <option value={"ascending"}>Low to High</option>
           <option value={"descending"}>High to Low</option>
@@ -176,7 +180,7 @@ export async function loader() {
 //Handles add to cart backend function
 export async function action({ request }: ActionArgs) {
   const formData = await request.formData();
-  const intent = formData.get('intent')
+  const intent = formData.get('intent');
   const data = Object.fromEntries(formData);
 
   if(intent === 'plus') {

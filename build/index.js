@@ -609,9 +609,11 @@ function Index() {
     localStorage.setItem("colorG", JSON.stringify(!colorG)), setColorG(!colorG);
   }, [colorB, setColorB] = (0, import_react3.useState)(!1), bColorHandler = (e) => {
     localStorage.setItem("colorB", JSON.stringify(!colorB)), setColorB(!colorB);
-  }, [sortType, setSortType] = (0, import_react3.useState)("");
+  }, [sortType, setSortType] = (0, import_react3.useState)(""), setSortTypeHandler = (e) => {
+    localStorage.setItem("sortType", JSON.stringify(e.target.value)), setSortType(e.target.value);
+  };
   return (0, import_react3.useEffect)(() => {
-    setIsVisible(JSON.parse(localStorage.getItem("isVisible")) || !1), setCategoryA(JSON.parse(localStorage.getItem("categoryA")) || !1), setCategoryB(JSON.parse(localStorage.getItem("categoryB")) || !1), setCategoryC(JSON.parse(localStorage.getItem("categoryC")) || !1), setColorR(JSON.parse(localStorage.getItem("colorR")) || !1), setColorG(JSON.parse(localStorage.getItem("colorG")) || !1), setColorB(JSON.parse(localStorage.getItem("colorB")) || !1), setSortType(JSON.parse(localStorage.getItem("sortType")) || !1);
+    setIsVisible(JSON.parse(localStorage.getItem("isVisible")) || !1), setCategoryA(JSON.parse(localStorage.getItem("categoryA")) || !1), setCategoryB(JSON.parse(localStorage.getItem("categoryB")) || !1), setCategoryC(JSON.parse(localStorage.getItem("categoryC")) || !1), setColorR(JSON.parse(localStorage.getItem("colorR")) || !1), setColorG(JSON.parse(localStorage.getItem("colorG")) || !1), setColorB(JSON.parse(localStorage.getItem("colorB")) || !1), setSortType(JSON.parse(localStorage.getItem("sortType")) || "");
   }, []), (0, import_react3.useEffect)(function() {
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
@@ -621,17 +623,17 @@ function Index() {
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Container, { className: "navbar fixed-top", fluid: !0, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("img", { className: "navbar-icon", src: require_shop_logo() }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 94,
+        lineNumber: 98,
         columnNumber: 9
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("h4", { children: "Shop Demo" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 95,
+        lineNumber: 99,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 93,
+      lineNumber: 97,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Container, { className: isVisible ? "filter-grid fixed-top" : "filter-grid fixed-top filter--hidden", children: [
@@ -649,7 +651,7 @@ function Index() {
         !1,
         {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 99,
+          lineNumber: 103,
           columnNumber: 9
         },
         this
@@ -668,35 +670,35 @@ function Index() {
         !1,
         {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 108,
+          lineNumber: 112,
           columnNumber: 9
         },
         this
       ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Form.Select, { className: "sort-select filter-container filter-button", value: sortType, onChange: (e) => setSortType(e.target.value), children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Form.Select, { className: "sort-select filter-container filter-button", value: sortType, onChange: setSortTypeHandler, children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("option", { children: "None" }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 118,
+          lineNumber: 122,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("option", { value: "ascending", children: "Low to High" }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 119,
+          lineNumber: 123,
           columnNumber: 11
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("option", { value: "descending", children: "High to Low" }, void 0, !1, {
           fileName: "app/routes/_index.tsx",
-          lineNumber: 120,
+          lineNumber: 124,
           columnNumber: 11
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 117,
+        lineNumber: 121,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 98,
+      lineNumber: 102,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Row, { className: "product-grid", children: products.filter((product) => !(categoryA && !product.categories.includes("A") || categoryB && !product.categories.includes("B") || categoryC && !product.categories.includes("C") || colorR && product.color !== "R" || colorG && product.color !== "G" || colorB && product.color !== "B" || product.stock === 0)).sort((a, b) => {
@@ -706,22 +708,22 @@ function Index() {
         return a.price < b.price ? 1 : -1;
     }).map((product) => /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(ProductComponent, { product }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 141,
+      lineNumber: 145,
       columnNumber: 15
     }, this)) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 124,
+      lineNumber: 128,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Row, { className: cart.length != 0 ? "cart-grid fixed-right" : "cart-grid--hidden fixed-right", children: /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Container, { className: "cart-content", children: cart.length != 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_jsx_dev_runtime7.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("h4", { children: "Cart" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 148,
+        lineNumber: 152,
         columnNumber: 13
       }, this),
       cart.map((entry2) => /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(CartEntryComponent, { entry: entry2 }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 150,
+        lineNumber: 154,
         columnNumber: 17
       }, this)),
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("h4", { className: "mb-2 text-muted", children: [
@@ -729,34 +731,34 @@ function Index() {
         cart.reduce((a, b) => a + parseFloat(b.price) * parseInt(b.count), 0).toFixed(2).replace(".", ",")
       ] }, void 0, !0, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 152,
+        lineNumber: 156,
         columnNumber: 13
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_react_bootstrap5.Button, { className: "pay-button", variant: "success", children: "Pay Now" }, void 0, !1, {
         fileName: "app/routes/_index.tsx",
-        lineNumber: 160,
+        lineNumber: 164,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 147,
+      lineNumber: 151,
       columnNumber: 31
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)(import_jsx_dev_runtime7.Fragment, {}, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 161,
+      lineNumber: 165,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 146,
+      lineNumber: 150,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/_index.tsx",
-      lineNumber: 145,
+      lineNumber: 149,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/_index.tsx",
-    lineNumber: 92,
+    lineNumber: 96,
     columnNumber: 5
   }, this);
 }
@@ -773,7 +775,7 @@ async function action({ request }) {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-QPAJBDOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-WAE5NWO2.js", "/build/_shared/chunk-KB4F7KC2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OKNMIMWQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-KSJVZDL6.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "7877b1b5", hmr: { runtime: "/build/_shared/chunk-KB4F7KC2.js", timestamp: 1693849817730 }, url: "/build/manifest-7877B1B5.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-QPAJBDOM.js", imports: ["/build/_shared/chunk-ZWGWGGVF.js", "/build/_shared/chunk-GIAAE3CH.js", "/build/_shared/chunk-XU7DNSPJ.js", "/build/_shared/chunk-WAE5NWO2.js", "/build/_shared/chunk-KB4F7KC2.js", "/build/_shared/chunk-UWV35TSL.js", "/build/_shared/chunk-BOXFZXVX.js", "/build/_shared/chunk-PNG5AS42.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-OKNMIMWQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-FUCUWALE.js", imports: ["/build/_shared/chunk-NMZL6IDN.js"], hasAction: !0, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, version: "f2450885", hmr: { runtime: "/build/_shared/chunk-KB4F7KC2.js", timestamp: 1693902744262 }, url: "/build/manifest-F2450885.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_dev: !0, unstable_postcss: !1, unstable_tailwind: !1, v2_errorBoundary: !0, v2_headers: !0, v2_meta: !0, v2_normalizeFormMethod: !0, v2_routeConvention: !0 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

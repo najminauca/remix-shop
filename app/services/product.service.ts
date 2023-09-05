@@ -13,9 +13,9 @@ export async function updateStock(updateStock, add: boolean) {
     if(products.filter(product => product.id === updateStock.id).length != 0) {
         products.forEach(product => {
             if(product.id === updateStock.id) {
-                if(add) product.stock = parseInt(product.stock) + 1;  //Always adds one back with minus
+                if(add) product.stock = parseInt(product.stock) + 1;  //Always adds 1 back with minus
                 else {
-                    if(product.stock >= 1) product.stock = parseInt(product.stock) - parseInt(updateStock.count); //Sometimes remove by 1 with minus
+                    if(product.stock >= 1) product.stock = parseInt(product.stock) - parseInt(updateStock.count); //Sometimes remove more than 1 with minus
                 }
             }
         })
