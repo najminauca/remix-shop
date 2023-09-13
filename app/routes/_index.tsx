@@ -23,38 +23,38 @@ export default function Index() {
 
   //Category states
   const [categoryA, setCategoryA] = useState(false);
-  const aCategoryHandler = e => {
+  const aCategoryHandler = () => {
     localStorage.setItem('categoryA', JSON.stringify(!categoryA));
     setCategoryA(!categoryA);
   };
 
   const [categoryB, setCategoryB] = useState(false);
-  const bCategoryHandler = e => {
+  const bCategoryHandler = () => {
     localStorage.setItem('categoryB', JSON.stringify(!categoryB));
     setCategoryB(!categoryB);
   };
 
   const [categoryC, setCategoryC] = useState(false);
-  const cCategoryHandler = e => {
+  const cCategoryHandler = () => {
     localStorage.setItem('categoryC', JSON.stringify(!categoryC));
     setCategoryC(!categoryC);
   };
 
   //Color states
   const [colorR, setColorR] = useState(false);
-  const rColorHandler = e => {
+  const rColorHandler = () => {
     localStorage.setItem('colorR', JSON.stringify(!colorR));
     setColorR(!colorR);
   };
 
   const [colorG, setColorG] = useState(false);
-  const gColorHandler = e => {
+  const gColorHandler = () => {
     localStorage.setItem('colorG', JSON.stringify(!colorG));
     setColorG(!colorG);
   };
 
   const [colorB, setColorB] = useState(false);
-  const bColorHandler = e => {
+  const bColorHandler = () => {
     localStorage.setItem('colorB', JSON.stringify(!colorB));
     setColorB(!colorB);
   };
@@ -67,14 +67,14 @@ export default function Index() {
 
   //Hydrating states
   useEffect(() => {
-    setIsVisible(JSON.parse(localStorage.getItem('isVisible')) || false)
-    setCategoryA(JSON.parse(localStorage.getItem('categoryA')) || false)
-    setCategoryB(JSON.parse(localStorage.getItem('categoryB')) || false)
-    setCategoryC(JSON.parse(localStorage.getItem('categoryC')) || false)
-    setColorR(JSON.parse(localStorage.getItem('colorR')) || false);
-    setColorG(JSON.parse(localStorage.getItem('colorG')) || false);
-    setColorB(JSON.parse(localStorage.getItem('colorB')) || false);
-    setSortType(JSON.parse(localStorage.getItem('sortType')) || "");
+    setIsVisible(JSON.parse(localStorage.getItem('isVisible') ?? "") || false)
+    setCategoryA(JSON.parse(localStorage.getItem('categoryA') ?? "") || false)
+    setCategoryB(JSON.parse(localStorage.getItem('categoryB') ?? "") || false)
+    setCategoryC(JSON.parse(localStorage.getItem('categoryC') ?? "") || false)
+    setColorR(JSON.parse(localStorage.getItem('colorR') ?? "") || false);
+    setColorG(JSON.parse(localStorage.getItem('colorG') ?? "") || false);
+    setColorB(JSON.parse(localStorage.getItem('colorB') ?? "") || false);
+    setSortType(JSON.parse(localStorage.getItem('sortType') ?? "") || "");
   }, []);
 
   useEffect(function mount() {

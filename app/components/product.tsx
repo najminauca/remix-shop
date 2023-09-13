@@ -1,5 +1,4 @@
 import {Button, Card} from "react-bootstrap";
-import {Link} from "@remix-run/react";
 
 export default function ProductComponent(
     {product}

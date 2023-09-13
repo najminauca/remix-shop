@@ -1,5 +1,4 @@
-import {Dropdown, DropdownButton, Form} from "react-bootstrap";
-import DropdownMenu from "react-bootstrap/DropdownMenu";
+import {Dropdown, Form} from "react-bootstrap";
 
 export default function ColorFilterComponent(
     {colorR, rColorHandler, colorG, gColorHandler, colorB, bColorHandler}
