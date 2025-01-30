@@ -65,16 +65,20 @@ export default function Index() {
     setSortType(e.target.value);
   };
 
+  const hydration = (storageName: string, setFunction: Function, fallback: boolean | string) => {
+    const storage = localStorage.getItem(`${storageName}`);
+  }
+
   //Hydrating states
   useEffect(() => {
-    setIsVisible(JSON.parse(localStorage.getItem('isVisible') ?? "") || false)
-    setCategoryA(JSON.parse(localStorage.getItem('categoryA') ?? "") || false)
-    setCategoryB(JSON.parse(localStorage.getItem('categoryB') ?? "") || false)
-    setCategoryC(JSON.parse(localStorage.getItem('categoryC') ?? "") || false)
-    setColorR(JSON.parse(localStorage.getItem('colorR') ?? "") || false);
-    setColorG(JSON.parse(localStorage.getItem('colorG') ?? "") || false);
-    setColorB(JSON.parse(localStorage.getItem('colorB') ?? "") || false);
-    setSortType(JSON.parse(localStorage.getItem('sortType') ?? "") || "");
+    hydration('isVisible', setIsVisible, false);
+    hydration('categoryA', setCategoryA, false);
+    hydration('categoryB', setCategoryB, false);
+    hydration('categoryC', setCategoryC, false);
+    hydration('colorR', setColorR, false);
+    hydration('colorG', setColorG, false);
+    hydration('colorB', setColorB, false);
+    hydration('sortType', setSortType, "");
   }, []);
 
   useEffect(function mount() {
